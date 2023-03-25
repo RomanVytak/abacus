@@ -1,0 +1,149 @@
+.form-popup {
+  display: none;
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(124, 110, 176, 0.82);
+  backdrop-filter: blur(6px);
+
+  &.active {
+    display: flex;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:after {
+      content: '✖';
+    }
+  }
+
+  .wrap {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 16px;
+
+    br {
+      display: none;
+    }
+  }
+
+  h4 {
+    font-size: 32px;
+    line-height: 110%;
+    font-family: $neucha;
+    text-transform: uppercase;
+  }
+
+  .wpcf7 {
+    margin: 15px 0 0;
+
+    .wpcf7-not-valid-tip {
+      display: none;
+    }
+
+    form {
+      &.sent {
+        .wpcf7-response-output {
+          color: #46b450;
+        }
+      }
+
+      &.invalid,
+      &.failed {
+        .wpcf7-response-output {
+          color: $error;
+        }
+      }
+    }
+
+    .wpcf7-response-output {
+      margin: 10px 0 0;
+      padding: 0;
+      border: none;
+      font-size: 13px;
+      line-height: 135%;
+    }
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px;
+    font-family: $neucha;
+    font-size: 16px;
+  }
+
+  input:not([type="submit"]),
+  select {
+    outline: none;
+    border: 1px solid #B4B4B4;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 25px;
+    color: #4F4868;
+    font-family: $opensans;
+
+    &.wpcf7-not-valid {
+      border-color: $error;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin: 15px 0 0;
+    padding: 0;
+
+    input {
+      z-index: 1;
+      position: relative;
+      cursor: pointer;
+      padding: 12px 20px;
+      outline: none;
+      border: none;
+      width: 100%;
+      background: transparent;
+      font-family: $neucha;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+    }
+
+    .wpcf7-spinner {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      margin: 0;
+    }
+  }
+
+  .note {
+    margin: 20px 0 0;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 135%;
+    color: $purple;
+
+    a {
+      color: #4D9CC8;
+      text-decoration: underline;
+    }
+  }
+}

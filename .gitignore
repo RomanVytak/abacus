@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!/wp-config.php
+!/readme.md
+!.htaccess
+
+# src
+!/src/
+src/node_modules
+src/package-lock.json
+
+# wp
+!/wp-content/
+wp-content/*
+!/wp-content/themes

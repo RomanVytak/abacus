@@ -1,0 +1,48 @@
+$max385: 'only screen and (max-width: 385px)';
+$min385: 'only screen and (min-width: 385px)';
+
+$max481: 'only screen and (max-width: 481px)';
+$min481: 'only screen and (min-width: 481px)';
+
+$max641: 'only screen and (max-width: 641px)';
+$min641: 'only screen and (min-width: 641px)';
+
+$max854: 'only screen and (max-width: 854px)';
+$min854: 'only screen and (min-width: 854px)';
+
+$max1025: 'only screen and (max-width: 1025px)';
+$min1025: 'only screen and (min-width: 1025px)';
+
+$max1261: 'only screen and (max-width: 1261px)';
+$min1261: 'only screen and (min-width: 1261px)';
+
+$min1441: 'only screen and (min-width: 1441px)';
+$min1681: 'only screen and (min-width: 1681px)';
+
+$portrait: 'only screen and (orientation: portrait)';
+$landscape: 'only screen and (orientation: landscape)';
+
+.row {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+
+  @media #{$min385} {}
+
+  @media #{$min481} {}
+
+  @media #{$min641} {}
+
+  @media #{$min854} {}
+
+  @media #{$min1025} {}
+
+  @media #{$min1261} {
+    max-width: 1240px;
+  }
+
+  @media #{$min1441} {}
+
+  @media #{$min1681} {}
+}

@@ -1,0 +1,45 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: $neucha;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    top: 1px;
+
+    &:after {
+      bottom: -4px;
+    }
+  }
+
+  &.rose {
+    background: $rose;
+    color: $white;
+
+    &:after {
+      background: image-url('button/rose/border.png') no-repeat center/100% 100%;
+    }
+  }
+
+  &.yellow {
+    background: $yellow;
+    color: $purple;
+
+    &:after {
+      background: image-url('button/yellow/border.png') no-repeat center/100% 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+@function image-url($path) {
+  @return url(#{$imgpath + $path});
+}
+
+@function picture-url($path) {
+  @return url(#{$pictpath + $path});
+}
+
+$imgpath: "../../img/";
+$pictpath: "../../pictures/";
+
+@import "~swiper/swiper";
+
+@import 'elements/fonts';
+@import 'elements/colors';
+@import 'normalize';
+@import 'greed';
+
+@import 'elements/common';
+@import 'elements/button';
+
+@import 'header';
+@import 'footer';
+
+@import 'elements/step';
+@import 'home/step-1';
+@import 'home/step-2';
+@import 'home/step-3';
+@import 'home/step-4';
+@import 'home/step-5';
+@import 'home/step-6';
+@import 'home/step-7';
+@import 'home/step-8';
+@import 'single';
+@import 'not-found';
+@import 'form';

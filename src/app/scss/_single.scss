@@ -1,0 +1,30 @@
+.single-post {
+  padding: 90px 0 0 0;
+  color: #4F4868;
+
+  @media #{$min1025} {
+    padding: 140px 0 0 0;
+  }
+
+  .editor-text {
+    max-width: 960px;
+    margin: 0 auto;
+
+    b,
+    strong {
+      font-weight: 700;
+    }
+
+    p {
+      a {
+        color: $rose;
+      }
+    }
+  }
+
+  .single-content {
+    >* {
+      margin: 20px 0;
+    }
+  }
+}

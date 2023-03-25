@@ -1,0 +1,14 @@
+.step {
+  position: relative;
+  padding: 45px 0;
+
+  @media #{$min1025} {
+    padding: 80px 0;
+  }
+
+  &:after,
+  &:before {
+    z-index: 1;
+    pointer-events: none;
+  }
+}

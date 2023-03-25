@@ -1,0 +1,22 @@
+.not-found-page {
+  .main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ededef;
+  }
+
+  .content-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    line-height: 120%;
+  }
+}
