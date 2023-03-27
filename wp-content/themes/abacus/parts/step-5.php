@@ -1,6 +1,6 @@
 <div class="step-5 step step-anchor" id="difference">
   <div class="row">
-    <h2 class="step-title"><?php langUsage('Чим ми відрізняємось від франшизи?', 'Чем мы отличаемся от франшизы?') ?></h2>
+    <h2 class="step-title"><?php the_field('difference_title'); ?></h2>
 
     <?php if (have_rows('difference')) : $i = 0; ?>
       <div class="items">

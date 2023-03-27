@@ -1,42 +1,30 @@
 <div class="step-7 step step-anchor" id="prices">
   <div class="row">
-    <h2 class="step-title"><?php langUsage('Ціни', 'Цены') ?></h2>
+    <h2 class="step-title"><?php the_field('prices_title'); ?></h2>
 
     <table>
       <thead>
 
         <tr>
           <td></td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Тільки Портал"', '"Только Портал"') ?></span>
-            <span class="price"><span>1990</span>грн</span>
-          </td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Матеріали + Портал"', '"Материалы + Портал"') ?></span>
-            <span class="price"><span>5490</span>грн</span>
-          </td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Навчання викладача"', '"Обучение преподавателя"') ?><span><?php langUsage('в індивідуальному форматі', 'в индивидуальном формате') ?></span></span>
-            <span class="price"><span>2990</span>грн</span>
-          </td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Старт з "0"', '"Старт c "0"') ?></span>
-            <span class="price"><span>7990</span>грн</span>
-          </td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Консульта-ція"', '"Консульта-ция"') ?> ***</span>
-            <span class="price"><span>390</span>грн</span>
-          </td>
-          <td>
-            <?php langUsage('Пакет', 'Пакет') ?>
-            <span class="name"><?php langUsage('"Навчання викладача"', '"Обучение преподавателя"') ?><span><?php langUsage('в груповому форматі', 'в групповом формате') ?></span></span>
-            <span class="price"><span>1490</span>грн</span>
-          </td>
+
+          <?php if (have_rows('packages_list')) : ?>
+            <?php while (have_rows('packages_list')) : the_row();
+              $title = get_sub_field('package_title');
+              $undertitle = get_sub_field('package_undertitle');
+              $price = get_sub_field('package_price');
+            ?>
+              <td>
+                <?php langUsage('Пакет', 'Пакет') ?>
+                <span class="name">
+                  <?php echo $title; ?>
+                  <span><?php echo $undertitle; ?></span>
+                </span>
+                <span class="price"><span><?php echo $price; ?></span>грн</span>
+              </td>
+            <?php endwhile; ?>
+          <?php endif; ?>
+
         </tr>
 
       </thead>
@@ -89,7 +77,7 @@
             <div class="text-wrap"><?php echo $text; ?></div>
             <div class="bottom">
               <p class="price"><span><?php echo $price; ?></span> грн</p>
-              <a href="#" class="button form rose" data-form-title="<?php echo langUsage('Записатися на ', 'Записаться на ') . str_replace('"', "'", $title); ?>"><?php langUsage('Записатися на курс', 'Записаться на курс') ?></a>
+              <a href="#" class="button form rose" data-form-title="<?php the_field('prices_button') . str_replace('"', "'", $title); ?>"><?php the_field('prices_button'); ?></a>
             </div>
           </div>
         <?php endwhile; ?>
@@ -107,7 +95,7 @@
     <?php endif; ?>
 
     <div class="button-wrap">
-      <a href="" class="button form rose has-package"><?php langUsage('Замовити послугу', 'Заказать услугу') ?></a>
+      <a href="" class="button form rose has-package"><?php the_field('prices_button'); ?></a>
     </div>
   </div>
 </div>

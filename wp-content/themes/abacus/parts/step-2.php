@@ -1,6 +1,6 @@
 <div class="step-2 step bg-pattern step-anchor" id="services">
   <div class="row">
-    <h2 class="step-title"><?php langUsage('Послуги та інструменти', 'Услуги и инструменты') ?></h2>
+    <h2 class="step-title"><?php the_field('services_title'); ?></h2>
 
     <?php if (have_rows('services')) : ?>
       <div class="items">

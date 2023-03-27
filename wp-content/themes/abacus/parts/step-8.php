@@ -1,6 +1,6 @@
 <div class="step-8 step bg-pattern step-anchor" id="reviews">
   <div class="row">
-    <h2 class="step-title"><?php langUsage('Відгуки', 'Отзывы') ?></h2>
+    <h2 class="step-title"><?php the_field('reviews_title'); ?></h2>
 
     <?php if (have_rows('reviews')) : ?>
       <div class="items">

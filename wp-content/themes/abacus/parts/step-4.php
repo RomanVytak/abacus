@@ -1,8 +1,7 @@
 <div class="step-4 step bg-pattern step-anchor" id="about">
   <div class="row">
     <div class="wrap">
-      <h2 class="step-title"><?php langUsage('Про проект', 'О проекте') ?></h2>
-
+      <h2 class="step-title"><?php the_field('project_title'); ?></h2>
       <div class="text-wrap"><?php the_field('project_text'); ?></div>
 
       <?php if (have_rows('project_items')) : ?>

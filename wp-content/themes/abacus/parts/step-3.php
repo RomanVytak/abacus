@@ -1,9 +1,8 @@
 <div class="step-3 step">
   <div class="row">
     <div class="text">
-      <p><?php langUsage('Що таке', 'Что такое') ?></p>
-      <h2 class="styled-title"><?php langUsage('«Ментальна арифметика»?', '«Ментальная арифметика»?') ?></h2>
-      <h4><?php langUsage('Ця методика призначена для розвитку', 'Эта методика предназначена для развития') ?>:</h4>
+      <h2 class="styled-title"><?php the_field('about_title'); ?></h2>
+      <h4><?php the_field('about_undertitle'); ?></h4>
     </div>
 
     <?php if (have_rows('about')) : ?>

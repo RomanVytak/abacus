@@ -1,6 +1,6 @@
 <div class="step-6 step bg-pattern step-anchor" id="info">
   <div class="row">
-    <h2 class="step-title"><?php langUsage('Про наш портал підтримки навчання', 'О нашем портале поддержки обучения') ?></h2>
+    <h2 class="step-title"><?php the_field('info_title'); ?></h2>
   </div>
 
   <?php if (have_rows('info')) : ?>
