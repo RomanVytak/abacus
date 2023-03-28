@@ -24,7 +24,7 @@
   table {
     font-size: 15px;
 
-    @media #{$max854} {
+    @media #{$max1025} {
       display: none;
     }
 
@@ -32,12 +32,22 @@
       border-bottom: 1px solid #B6AAE0;
       border-right: 1px dashed #B4B4B4;
       padding: 15px 10px;
-      width: calc(100% / 6);
+
+      @media #{$min1025} {
+        width: calc(100% / 6);
+      }
 
       &:first-child {
         span {
-          width: 360px;
           display: block;
+
+          @media #{$min1025} {
+            width: 220px;
+          }
+
+          @media #{$min1261} {
+            width: 400px;
+          }
         }
       }
 
@@ -52,21 +62,13 @@
       align-items: center;
       background: $purple;
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 16px;
       color: #fff;
       line-height: 120%;
       font-weight: 700;
 
-      @media #{$min1261} {
-        border-radius: 16px;
-      }
-
       span {
-        font-size: 16px;
-
-        @media #{$min1261} {
-          font-size: 24px;
-        }
+        font-size: 24px;
       }
     }
 
@@ -85,7 +87,7 @@
         line-height: 140%;
       }
 
-      @media #{$min1261} {
+      @media #{$min1025} {
         margin: 5px 0;
         font-size: 18px;
       }
@@ -143,15 +145,18 @@
   }
 
   .button-wrap {
-    margin: 35px 0 0;
     text-align: center;
 
-    @media #{$min854} {
+    @media #{$max1025} {
+      display: none;
+    }
+
+    @media #{$min1025} {
       margin: 70px 0 0;
     }
 
     .button {
-      @media #{$min854} {
+      @media #{$min1025} {
         font-size: 24px;
       }
     }
@@ -162,7 +167,7 @@
     flex-wrap: wrap;
     gap: 20px;
 
-    @media #{$min854} {
+    @media #{$min1025} {
       display: none;
     }
 
@@ -223,7 +228,7 @@
     gap: 15px 30px;
     margin: 30px 0 0;
 
-    @media #{$min854} {
+    @media #{$min1025} {
       gap: 40px;
       margin: 40px 0 0;
     }
@@ -236,7 +241,7 @@
         width: calc(50% - 15px);
       }
 
-      @media #{$min854} {
+      @media #{$min1025} {
         width: calc(25% - 30px);
       }
     }

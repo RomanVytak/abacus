@@ -71,13 +71,14 @@
           $title = get_sub_field('prices_mob_title');
           $text = get_sub_field('prices_mob_text');
           $price = get_sub_field('prices_mob_price');
+          $button = get_sub_field('prices_mob_button');
         ?>
           <div class="item">
             <h4><?php echo $title; ?></h4>
             <div class="text-wrap"><?php echo $text; ?></div>
             <div class="bottom">
               <p class="price"><span><?php echo $price; ?></span> грн</p>
-              <a href="#" class="button form rose" data-form-title="<?php the_field('prices_button') . str_replace('"', "'", $title); ?>"><?php the_field('prices_button'); ?></a>
+              <a href="#" class="button form rose" data-form-title="<?php echo $button . str_replace('"', "'", $title); ?>"><?php echo $button; ?></a>
             </div>
           </div>
         <?php endwhile; ?>

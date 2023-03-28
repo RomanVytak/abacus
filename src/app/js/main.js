@@ -20,6 +20,7 @@ new Swiper('.step-6-swiper', {
   slidesPerView: 1.2,
   spaceBetween: 5,
   simulateTouch: false,
+  initialSlide: 1,
   breakpoints: {
     641: {
       slidesPerView: 1.6,

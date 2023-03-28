@@ -3,6 +3,8 @@
   color: #fff;
 
   .items {
+    z-index: 2;
+    position: relative;
     display: flex;
     gap: 10px;
 

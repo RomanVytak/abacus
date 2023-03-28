@@ -3,6 +3,9 @@
   color: #fff;
 
   .swiper {
+    z-index: 2;
+    position: relative;
+
     .swiper-slide {
       position: relative;
       padding: 5px 7px;
