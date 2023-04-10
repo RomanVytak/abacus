@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     left: 0;
-    width: 100vw;
+    width: 100%;
   }
 
   &:before {
@@ -22,7 +22,11 @@
   }
 
   table {
-    font-size: 15px;
+    font-size: 13px;
+
+    @media #{$min1261} {
+      font-size: 15px;
+    }
 
     @media #{$max1025} {
       display: none;
@@ -31,25 +35,7 @@
     td {
       border-bottom: 1px solid #B6AAE0;
       border-right: 1px dashed #B4B4B4;
-      padding: 15px 10px;
-
-      @media #{$min1025} {
-        width: calc(100% / 6);
-      }
-
-      &:first-child {
-        span {
-          display: block;
-
-          @media #{$min1025} {
-            width: 220px;
-          }
-
-          @media #{$min1261} {
-            width: 400px;
-          }
-        }
-      }
+      padding: 10px;
 
       &:last-child {
         border-right: none;
@@ -85,10 +71,15 @@
         display: inline-block;
         font-size: 12px;
         line-height: 140%;
+        color: $gray;
       }
 
       @media #{$min1025} {
         margin: 5px 0;
+        font-size: 15px;
+      }
+
+      @media #{$min1261} {
         font-size: 18px;
       }
     }

@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     left: 0;
-    width: 100vw;
+    width: 100%;
   }
 
   &:before {
@@ -45,18 +45,21 @@
     }
 
     h4 {
-      padding: 8px 24px;
       border-radius: 12px 10px 18px 10px;
-      background: #E84272;
       display: inline-block;
-      color: #fff;
+      max-width: 75vw;
+      color: #4d9cc8;
       font-family: $neucha;
-      font-size: 16px;
+      font-size: 22px;
       text-transform: uppercase;
       line-height: 136%;
 
+      @media #{$min641} {
+        font-size: 30px;
+      }
+
       @media #{$min854} {
-        font-size: 24px;
+        font-size: 36px;
       }
     }
   }

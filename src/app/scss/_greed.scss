@@ -28,6 +28,10 @@ $landscape: 'only screen and (orientation: landscape)';
   padding: 0 15px;
   width: 100%;
 
+  &.full {
+    max-width: none;
+  }
+
   @media #{$min385} {}
 
   @media #{$min481} {}
@@ -40,6 +44,10 @@ $landscape: 'only screen and (orientation: landscape)';
 
   @media #{$min1261} {
     max-width: 1240px;
+
+    &.full {
+      padding: 0 4vw;
+    }
   }
 
   @media #{$min1441} {}

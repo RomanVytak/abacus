@@ -1,7 +1,9 @@
 <div class="step-7 step step-anchor" id="prices">
   <div class="row">
     <h2 class="step-title"><?php the_field('prices_title'); ?></h2>
+  </div>
 
+  <div class="row full">
     <table>
       <thead>
 
@@ -36,7 +38,7 @@
           ?>
             <tr>
               <td class="item">
-                <span><?php echo $title; ?></span>
+                <?php echo $title; ?>
               </td>
 
               <?php if (have_rows('prices_desktop_options')) : ?>
@@ -64,7 +66,9 @@
 
       </tbody>
     </table>
+  </div>
 
+  <div class="row">
     <?php if (have_rows('prices_mob')) : ?>
       <div class="mobile-table">
         <?php while (have_rows('prices_mob')) : the_row();
@@ -99,4 +103,5 @@
       <a href="" class="button form rose has-package"><?php the_field('prices_button'); ?></a>
     </div>
   </div>
+</div>
 </div>
