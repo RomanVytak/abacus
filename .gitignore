@@ -3,6 +3,7 @@
 !/wp-config.php
 !/readme.md
 !.htaccess
+!robots.txt
 
 # src
 !/src/

@@ -32,21 +32,13 @@
         width: calc(50% - 15px);
       }
 
-      .holder {
+      .video {
         position: relative;
         padding-top: 56%;
 
         @media #{$max854} {
           width: calc(100vw - 80px);
         }
-      }
-
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
       }
     }
   }

@@ -102,3 +102,16 @@ $(function () {
     form.removeClass('active')
   })
 })
+
+
+
+// ------------------------ VIDEO PLAY
+
+$(function () {
+  $('.video .img').on('click', function () {
+    $('<iframe>', {
+      src: `https://www.youtube.com/embed/${$(this).attr('data-id')}?autoplay=1`,
+      allow: 'autoplay',
+    }).appendTo($(this).parent());
+  })
+})

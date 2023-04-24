@@ -16,7 +16,7 @@
 
       <div class="logo-wrap">
         <div class="logo">
-          <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" alt="">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" alt="<?php langUsage('Ментальна арифметика', 'Ментальная арифметика') ?>">
         </div>
       </div>
 

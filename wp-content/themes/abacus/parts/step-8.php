@@ -8,8 +8,11 @@
           $video = substr(get_sub_field('reviews_video'), strpos(get_sub_field('reviews_video'), "=") + 1);
         ?>
           <div class="item">
-            <div class="holder">
-              <iframe width="420" height="315" src="https://www.youtube.com/embed/<?php echo $video; ?>"></iframe>
+            <div class="video">
+              <div class="img" data-id="<?php echo $video; ?>">
+                <img src="https://img.youtube.com/vi/<?php echo $video; ?>/hqdefault.jpg" alt="video">
+                <span class="play"></span>
+              </div>
             </div>
           </div>
         <?php endwhile; ?>
