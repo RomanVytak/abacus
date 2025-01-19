@@ -1,0 +1,33 @@
+.fixed-social {
+  z-index: 999;
+  position: fixed;
+  right: 7px;
+  bottom: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  @media #{$min641} {
+    right: 20px;
+    bottom: 15px;
+    gap: 5px;
+  }
+
+  a {
+    width: 34px;
+    display: flex;
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+    @media #{$min641} {
+      width: 40px;
+      border: 3px solid #fff;
+    }
+
+    img {
+      width: 100px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

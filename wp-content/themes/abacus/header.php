@@ -112,5 +112,14 @@ function langUsage($defaultText, $alternativeText)
     </div>
   </header>
 
+  <div class="fixed-social">
+    <a href="https://t.me/Abacus_Arithmetic" target="_blank">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/social/telegram.png" />
+    </a>
+    <a href="viber://chat?number=+380680608588" target="_blank">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/social/viber.png" />
+    </a>
+  </div>
+
   <!-- main wrapper open -->
   <div class="main-wrapper">
