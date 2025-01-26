@@ -14,13 +14,13 @@
   }
 
   a {
-    width: 34px;
+    width: 43px;
     display: flex;
     border-radius: 50%;
     border: 2px solid #fff;
 
     @media #{$min641} {
-      width: 40px;
+      width: 50px;
       border: 3px solid #fff;
     }
 
