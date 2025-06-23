@@ -37,7 +37,7 @@
           <div class="site">
             <div class="ico"></div>
             <span>портал</span>
-            <a href="https://abacusarithmetic.com" target="_blank">abacusarithmetic.com</a>
+            <a href="https://school.abacusarithmetic.com/" target="_blank">school.abacusarithmetic.com</a>
           </div>
         </div>
       </div>

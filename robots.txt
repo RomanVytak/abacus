@@ -25,5 +25,5 @@ Allow: /wp-*.jpeg
 Allow: /wp-*.gif
 Allow: /wp-admin/admin-ajax.php
 
-Host: https://info.abacusarithmetic.com/
-Sitemap: https://info.abacusarithmetic.com/sitemap_index.xml
+Host: https://abacusarithmetic.com/
+Sitemap: https://abacusarithmetic.com/sitemap_index.xml
