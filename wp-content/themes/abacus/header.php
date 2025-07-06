@@ -16,18 +16,6 @@
 
   <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZL1S95F4V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-BZL1S95F4V');
-  </script>
-
   <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- php device check -->
