@@ -1,29 +1,36 @@
-# README #
+# AbacusArithmetic.com
 
-This README would normally document whatever steps are necessary to get your application up and running.
+**AbacusArithmetic.com** is an educational website that introduces children to abacus-based mental arithmetic in a fun and engaging way.
 
-### What is this repository for? ###
+> 🚧 **This project is currently under development**. Some features, content, and styles may be incomplete or subject to change.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+---
 
-### How do I get set up? ###
+## 📘 Overview
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+The goal of this website is to promote abacus learning for kids through interactive and visual materials. It provides:
 
-### Contribution guidelines ###
+- Information about the abacus learning method
+- Videos and media demonstrations
+- A way for parents to get in touch and enroll their children
+- Details about the benefits of mental arithmetic training
 
-* Writing tests
-* Code review
-* Other guidelines
+---
 
-### Who do I talk to? ###
+## 🛠️ Tech Stack
 
-* Repo owner or admin
-* Other community or team contact
+- WordPress CMS (custom theme)
+- PHP / HTML / CSS / JavaScript
+- Contact Form 7
+- YouTube video embeds
+- Custom admin features for content management
+
+---
+
+## 🚀 Local Development
+
+To set up this project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/abacusarithmetic.git
