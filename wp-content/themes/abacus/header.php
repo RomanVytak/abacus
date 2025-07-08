@@ -18,7 +18,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- php device check -->
   <?php
   function wp_is_mobile_new()
   {
