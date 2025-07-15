@@ -150,32 +150,8 @@ footer {
         }
       }
 
-      .list {
+      .social-list {
         margin: 15px 0 0;
-        display: flex;
-        gap: 10px;
-
-        @media #{$max1025} {
-          justify-content: center;
-        }
-
-        a {
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-
-          &.face {
-            background: #3B5998 image-url('face.svg') no-repeat center;
-          }
-
-          &.insta {
-            background: #C13584 image-url('insta.svg') no-repeat center;
-          }
-
-          &.you {
-            background: #FF0000 image-url('you.svg') no-repeat center;
-          }
-        }
       }
     }
   }

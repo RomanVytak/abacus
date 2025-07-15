@@ -216,7 +216,7 @@
   .notes {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px 30px;
+    gap: 30px;
     margin: 30px 0 0;
 
     @media #{$min1025} {
@@ -226,14 +226,14 @@
 
     p {
       font-weight: 700;
-      font-size: 15px;
+      font-size: 13px;
 
       @media #{$min641} {
         width: calc(50% - 15px);
       }
 
       @media #{$min1025} {
-        width: calc(25% - 30px);
+        width: calc(16.66667% - 34px);
       }
     }
   }

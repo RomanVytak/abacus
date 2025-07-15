@@ -1,12 +1,12 @@
 <div class="step-1 bg-pattern step" id="home">
   <div class="top-row">
     <div class="row">
-      <h1 class="styled-title">
-        <?php langUsage('Ментальна арифметика', 'Ментальная арифметика') ?>
-        <span class="holder">
+      <div class="title-holder">
+        <div class="note-holder">
+          <h1 class="styled-title"><?php langUsage('Ментальна арифметика', 'Ментальная арифметика') ?></h1>
           <span class="note"><?php langUsage('відмінно працює в онлайн форматі', 'отлично работает в онлайн формате') ?></span>
-        </span>
-      </h1>
+        </div>
+      </div>
       <div class="text-wrap">
         <p><?php the_field('home_description'); ?></p>
         <p class="langs"><?php the_field('home_langs'); ?></p>

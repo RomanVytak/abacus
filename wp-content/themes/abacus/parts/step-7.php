@@ -68,7 +68,7 @@
     </table>
   </div>
 
-  <div class="row">
+  <div class="row full">
     <?php if (have_rows('prices_mob')) : ?>
       <div class="mobile-table">
         <?php while (have_rows('prices_mob')) : the_row();

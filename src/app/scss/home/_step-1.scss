@@ -22,45 +22,54 @@
     @media #{$min1025} {
       font-size: 145px;
     }
+  }
 
-    .holder {
+  .title-holder {
+    text-align: center;
+
+    .note-holder {
       position: relative;
+      display: unset;
+
+      .styled-title {
+        display: unset;
+      }
+    }
+  }
+
+  .note {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: $yellow;
+    padding: 13px 0 0 15px;
+    margin: 0 0 1vw -8vw;
+    text-transform: uppercase;
+    font-family: $neucha;
+    color: $purple;
+    text-align: left;
+    font-size: 10px;
+    line-height: 117%;
+
+    @media #{$min641} {
+      top: 100%;
+      bottom: auto;
+      width: 100px;
+      height: 100px;
+      padding: 16px 0 0 21px;
+      margin: -8vw 0 0 -4vw;
+      font-size: 15px;
     }
 
-    .note {
-      position: absolute;
-      bottom: 100%;
-      left: 100%;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: $yellow;
-      padding: 13px 0 0 15px;
-      margin: 0 0 1vw -8vw;
-      text-transform: uppercase;
-      font-family: $neucha;
-      color: $purple;
-      text-align: left;
-      font-size: 10px;
-      line-height: 117%;
-
-      @media #{$min641} {
-        top: 100%;
-        bottom: auto;
-        width: 100px;
-        height: 100px;
-        padding: 16px 0 0 21px;
-        margin: -8vw 0 0 -4vw;
-        font-size: 15px;
-      }
-
-      @media #{$min1025} {
-        width: 130px;
-        height: 130px;
-        padding: 25px;
-        margin: -80px 0 0 -30px;
-        font-size: 18px;
-      }
+    @media #{$min1025} {
+      width: 130px;
+      height: 130px;
+      padding: 25px;
+      margin: -80px 0 0 -30px;
+      font-size: 18px;
     }
   }
 

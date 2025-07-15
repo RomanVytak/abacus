@@ -3,16 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-  <title><?php echo get_bloginfo('name'); ?></title>
   <meta name="viewport" content="width=device-width">
   <meta name="format-detection" content="telephone=no">
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="<?php echo get_bloginfo('name'); ?>" />
-  <meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/faceimage.jpg" />
-  <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-  <meta property="og:url" content="<?php echo get_option('home'); ?>" />
 
   <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 
@@ -71,7 +63,7 @@ function langUsage($defaultText, $alternativeText)
                 echo ' not-found-page';
               } ?>">
   <header class="header">
-    <div class="row">
+    <div class="row full">
       <div class="wrap">
 
         <span class="menu-button">
@@ -90,6 +82,10 @@ function langUsage($defaultText, $alternativeText)
           <a class="anchor" href="<?php echo $homePath; ?>#prices"><?php langUsage('Ціни', 'Цены') ?></a>
           <a class="anchor" href="<?php echo $homePath; ?>#reviews"><?php langUsage('Відгуки', 'Отзывы') ?></a>
         </nav>
+
+        <div class="header-social">
+          <?php include('parts/social.php'); ?>
+        </div>
 
         <ul class="lang">
           <?php pll_the_languages(); ?>

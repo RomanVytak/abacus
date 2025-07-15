@@ -1,0 +1,47 @@
+.social-list {
+  display: flex;
+  gap: 10px;
+
+  .header-social & {
+    gap: 6px;
+
+    @media #{$max1025} {
+      display: none;
+
+      .mob-menu-open & {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        top: calc(100vh - 30px - 15px);
+        right: 15px;
+      }
+    }
+
+    a {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media #{$max1025} {
+    justify-content: center;
+  }
+
+  a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    &.face {
+      background: #3B5998 image-url('face.svg') no-repeat center;
+    }
+
+    &.insta {
+      background: #C13584 image-url('insta.svg') no-repeat center;
+    }
+
+    &.you {
+      background: #FF0000 image-url('you.svg') no-repeat center;
+    }
+  }
+}
