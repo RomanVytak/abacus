@@ -20,3 +20,15 @@ The goal of this website is to promote abacus learning for kids through interact
 - Contact Form 7
 - YouTube video embeds
 - Custom admin features for content management
+
+## 💡 Contributions
+
+This repository is not currently accepting public contributions.  
+However, feel free to explore, fork, or adapt it for your own workflows.
+
+## 📬 Contact
+
+Need a custom WordPress solution or want to collaborate?
+
+**PlumPix**  
+🌐 [PlumPix](https://www.plumpix.io/)
