@@ -119,3 +119,132 @@ add_action('wp_footer', function () {
   <!-- End Google Tag Manager (noscript) -->
 <?php
 }, 0);
+
+// --- Додаємо Meta Pixel ID в Settings -> General
+add_filter('admin_init', function () {
+  add_settings_field(
+    'fb_pixel_id',
+    'Meta Pixel ID',
+    function () {
+      $value = get_option('fb_pixel_id', '');
+      echo '<input type="text" name="fb_pixel_id" value="' . esc_attr($value) . '" class="regular-text" placeholder="123456789012345">';
+    },
+    'general'
+  );
+  register_setting('general', 'fb_pixel_id', [
+    'type' => 'string',
+    'sanitize_callback' => 'sanitize_text_field',
+    'default' => '',
+  ]);
+});
+
+// --- Виводимо Meta Pixel у <head>
+add_action('wp_head', function () {
+  $id = get_option('fb_pixel_id');
+  if (!$id || !ctype_digit($id)) return;
+?>
+  <!-- Meta Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?php echo esc_js($id); ?>');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+<?php
+}, 0);
+
+// --- <noscript> блок у <body> (wp_footer)
+add_action('wp_footer', function () {
+  $id = get_option('fb_pixel_id');
+  if (!$id || !ctype_digit($id)) return;
+?>
+  <!-- Meta Pixel (noscript) -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=<?php echo esc_attr($id); ?>&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel -->
+<?php
+}, 0);
+
+
+
+
+
+
+// --- add Meta Pixel ID in Settings -> General
+add_filter('admin_init', function () {
+  add_settings_field(
+    'fb_pixel_id',
+    'Meta Pixel ID',
+    function () {
+      $value = get_option('fb_pixel_id', '');
+      echo '<input type="text" name="fb_pixel_id" value="' . esc_attr($value) . '" class="regular-text" placeholder="1107742024573536">';
+    },
+    'general'
+  );
+  register_setting('general', 'fb_pixel_id', [
+    'type' => 'string',
+    'sanitize_callback' => 'sanitize_text_field',
+    'default' => '',
+  ]);
+});
+
+// --- add Meta Pixel у <head>
+add_action('wp_head', function () {
+  $id = get_option('fb_pixel_id');
+  if (!$id || !ctype_digit($id)) return;
+?>
+  <!-- Meta Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?php echo esc_js($id); ?>');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+<?php
+}, 0);
+
+// add <noscript> in <body> (wp_footer)
+add_action('wp_footer', function () {
+  $id = get_option('fb_pixel_id');
+  if (!$id || !ctype_digit($id)) return;
+?>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=<?php echo esc_attr($id); ?>&ev=PageView&noscript=1" /></noscript>
+<?php
+}, 0);

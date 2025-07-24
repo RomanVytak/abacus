@@ -3,9 +3,9 @@
     <span class="close"></span>
     <h4><?php langUsage('Консультація', 'Консультация') ?></h4>
     <?php if (get_locale() === 'ru_RU') {
-      echo do_shortcode('[contact-form-7 id="97" title="Заказать услугу (рус)"]');
+      echo do_shortcode('[contact-form-7 id="92ed5bc" title="Заказать услугу (рус)"]');
     } else {
-      echo do_shortcode('[contact-form-7 id="96" title="Замовити послугу (укр)"]');
+      echo do_shortcode('[contact-form-7 id="9e2c10e" title="Замовити послугу (укр)"]');
     } ?>
   </div>
 </div>
